@@ -1,5 +1,5 @@
 package Testing;
 
 public class test {
-asd;
+	int a = 0;
 }
