@@ -9,10 +9,13 @@ branches:
 before_install:
   - chmod +x gradlew
 
-# Travis CI 서버의 Home
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
 cache:
   directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.gradle'
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
 
 script: "./gradlew clean build"
