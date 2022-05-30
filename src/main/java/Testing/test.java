@@ -1,5 +1,8 @@
 package Testing;
 
 public class test {
-	int a = 0;
+	int testMethod(int a) {
+		return a;
+	}
 }
+
